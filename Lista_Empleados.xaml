@@ -1,0 +1,61 @@
+﻿<Window x:Class="Proyecto_GYM.Lista_Empleados"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto_GYM"
+        mc:Ignorable="d"
+        Title="Lista_Empleados" Height="570" Width="1200">
+    <Grid Margin="0,0,0,-6" Background="#FFA7D8F9">
+        <Image HorizontalAlignment="Center" Height="560" VerticalAlignment="Center" Width="1200" Source="/Menu.jpeg" Stretch="Fill"/>
+        <Label Content="Lista de Empleados" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="-7.433,-4.183" FontSize="50" FontFamily="Gill Sans MT" Background="{x:Null}" Foreground="Black" Height="59"/>
+        <DataGrid x:Name="UserTable" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" Margin="543,64,10,0" IsSynchronizedWithCurrentItem="True"  >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
+                <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}"/>
+                <DataGridTextColumn Header="Puesto" Binding="{Binding Puesto}"/>
+                <DataGridTemplateColumn Header="Editar">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Editar" Click="SelectItem"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+                <DataGridTemplateColumn Header="Eliminar">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Eliminar" Click="Button_Click_1"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="343,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" IsEnabled="False" BorderBrush="#FF253648"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="343,312,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="26" BorderBrush="#FF253648"/>
+        <TextBox x:Name="txtApellido" HorizontalAlignment="Left" Margin="343,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="182" Height="24" BorderBrush="#FF253648"/>
+        <ComboBox x:Name="cmbPuesto" HorizontalAlignment="Left" Margin="343,430,0,0" VerticalAlignment="Top" Width="182" SelectionChanged="cmbPuesto_SelectionChanged" BorderBrush="#FF00C9FF" >
+            <TabItem/>
+
+        </ComboBox>
+        <Label Content="Id" HorizontalAlignment="Left" Margin="343,116,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="343,281,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Normal"/>
+        <Label Content="Apellido" HorizontalAlignment="Left" Margin="355,185,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Normal"/>
+        <Label Content="Puesto" HorizontalAlignment="Left" Margin="353,394,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Normal"/>
+        <Button x:Name="Guardar" Content="Guardar" HorizontalAlignment="Left" Margin="343,482,0,0" VerticalAlignment="Top" Background="#FF00C9FF"  Height="41" Width="182" Click="Guardar_Click" />
+        <Image HorizontalAlignment="Left" Height="59" Margin="0,118,0,0" VerticalAlignment="Top" Width="57" Source="/e.jpeg" Stretch="Fill"/>
+        <Button x:Name="BtnRegistrarempleados" Content="Registrar Empleados" HorizontalAlignment="Left" Margin="62,137,0,0" VerticalAlignment="Top" Height="40" Width="159" BorderBrush="#FF00C9FF" Background="{x:Null}" FontSize="16" Foreground="White" Click="BtnRegistrarempleados_Click"/>
+        <Button x:Name="BtnListaempleados" Content="Lista de Empleados " HorizontalAlignment="Left" Margin="61,239,0,0" VerticalAlignment="Top" Height="40" Width="159" BorderBrush="#FF00C9FF" Background="{x:Null}" FontSize="16" Foreground="White" Click="BtnListaempleados_Click"/>
+        <Image HorizontalAlignment="Left" Height="64" Margin="0,215,0,0" VerticalAlignment="Top" Width="61" Source="/i.jpeg" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="64" Margin="0,430,0,0" VerticalAlignment="Top" Width="61" Source="/i.jpeg" Stretch="Fill"/>
+        <Image HorizontalAlignment="Left" Height="64" Margin="0,322,0,0" VerticalAlignment="Top" Width="57" Source="/o.jpeg" Stretch="Fill"/>
+        <Button x:Name="btnClientes" Content="Registrar Clientes" HorizontalAlignment="Left" Margin="61,346,0,0" VerticalAlignment="Top" Height="40" Width="159" BorderBrush="#FF00C9FF" Background="{x:Null}" FontSize="16" Foreground="White" Click="btnClientes_Click"/>
+        <Button x:Name="btnListaclientes" Content="Lista de clientes" HorizontalAlignment="Left" Margin="61,454,0,0" VerticalAlignment="Top" Height="40" Width="159" BorderBrush="#FF00C9FF" Background="{x:Null}" FontSize="16" Foreground="White" Click="btnListaclientes_Click"/>
+
+    </Grid>
+</Window>

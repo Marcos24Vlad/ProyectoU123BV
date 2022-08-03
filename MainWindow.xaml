@@ -1,0 +1,29 @@
+﻿<Window x:Class="Proyecto_GYM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Proyecto_GYM"
+        mc:Ignorable="d"
+     Title="MainWindow" Height="450" Width="800">
+
+    <Grid Background="#FF25364B">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Login" HorizontalAlignment="Left" Margin="459,38,0,0" VerticalAlignment="Top" Height="74" Width="158" FontSize="48" RenderTransformOrigin="0.157,0.464" FontFamily="Trebuchet MS" HorizontalContentAlignment="Center" Foreground="White"/>
+        <TextBox x:Name="txtUser" HorizontalAlignment="Left" Margin="350,163,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="376" Height="20" Background="Red" CaretBrush="White"/>
+
+        <Button x:Name="btniniciar" Content="Iniciar Sesión" HorizontalAlignment="Left" Margin="350,321,0,0" VerticalAlignment="Top" Width="376"  FontWeight="Bold" Height="26" Click="btniniciar_Click" BorderBrush="CornflowerBlue" Background="{x:Null}" Foreground="#FF68A6FD">
+
+        </Button>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="350,223,0,0" VerticalAlignment="Top" Width="376" Height="20"/>
+        <Label Content="Contraseña" HorizontalAlignment="Left" Margin="350,197,0,0" VerticalAlignment="Top" FontWeight="Normal" Foreground="#FFFFFBFB" />
+
+        <Label Content="Usuario" HorizontalAlignment="Left" Margin="350,137,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <Image HorizontalAlignment="Left" Height="432" VerticalAlignment="Top" Width="302" Source="/prtada.jpg" Stretch="Fill"/>
+
+
+    </Grid>
+</Window>
